@@ -975,11 +975,13 @@ a:hover {
         margin-top: 40px;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .hero-image-right img { 
-        max-width: 115%; /* ขยายขนาดรูปภาพให้ใหญ่ขึ้นและดูเต็มตาในมือถือ */
+        max-width: 100%; /* ปรับให้พอดีกับหน้าจอเพื่อป้องกันการตกขอบ */
         height: auto;
-        margin: 0 auto; 
+        margin: 0 auto;
+        display: block;
     }
     .workflow-card { flex-basis: 45%; }
     .mission-vision-grid {
