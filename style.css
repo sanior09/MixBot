@@ -145,11 +145,17 @@ a:hover {
     border: none;
     cursor: pointer;
     font-size: 1em;
+    animation: neon-pulse 3s infinite ease-in-out;
 }
 
 .btn:hover {
     background-color: var(--color-white);
     color: var(--color-dark-blue);
+}
+
+@keyframes neon-pulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(100, 255, 218, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(100, 255, 218, 0.6); }
 }
 
 /* Stats Section */
@@ -265,6 +271,33 @@ a:hover {
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Tactical HUD Corners */
+.hardware-card::before, .hardware-card::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-accent-green);
+    z-index: 3;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.hardware-card::before { top: 15px; left: 15px; border-right: none; border-bottom: none; }
+.hardware-card::after { bottom: 15px; right: 15px; border-left: none; border-top: none; }
+
+.hardware-card:hover::before, .hardware-card:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.hardware-card:hover {
+    border-color: var(--color-accent-green);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
 }
 
 .hardware-card:hover {
@@ -278,6 +311,29 @@ a:hover {
     height: 350px;
     background: rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    position: relative;
+}
+
+.hardware-img-container::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent-green);
+    box-shadow: 0 0 15px var(--color-accent-green);
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.hardware-card:hover .hardware-img-container::after {
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: 0%; }
+    100% { top: 100%; }
 }
 
 .hardware-img-container img {
