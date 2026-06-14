@@ -960,11 +960,13 @@ a:hover {
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
+    :root { --padding-section: 50px 20px; }
     h1 { font-size: 2.8em; }
     h2 { font-size: 2em; }
-    .hero-section { justify-content: center; }
+    .hero-section { justify-content: center; padding-top: 80px; min-height: auto; padding-bottom: 50px; }
     .hero-wrapper {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         width: 100%;
     }
@@ -973,13 +975,15 @@ a:hover {
     .hero-image-right {
         width: 100%;
         margin-top: 40px;
+        margin-left: 0;
+        margin-right: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .hero-image-right img { 
-        max-width: 100%; /* ปรับให้พอดีกับหน้าจอเพื่อป้องกันการตกขอบ */
-        height: auto;
+        width: 100%;
+        max-width: 500px; /* จำกัดขนาดไม่ให้ใหญ่เกินไปในแท็บเล็ต */
         margin: 0 auto;
         display: block;
     }
@@ -991,6 +995,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    :root { --padding-section: 40px 15px; }
     h1 { font-size: 2.2em; }
     .hero-glass-card { padding: 40px 20px; }
     .hero-btns { flex-direction: column; gap: 10px; }
@@ -1004,7 +1009,7 @@ a:hover {
     }
     .workflow-cards, .control-buttons, .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .workflow-card { max-width: 90%; min-width: unset; }
-    .control-button { width: 190px; height: 190px; }
+    .control-button { width: 160px; height: 160px; font-size: 0.9em; }
     .contact-form .btn { align-self: center; }
     
     .team-grid {
@@ -1021,8 +1026,11 @@ a:hover {
     
     .workflow-cards, .gallery-grid, .team-grid { grid-template-columns: 1fr; }
     
+    .control-buttons { gap: 15px; }
+    .control-button { width: 140px; height: 140px; }
     .control-button .icon { font-size: 2.2em; }
-    .control-button p { font-size: 0.75em; }
+    .control-button p { font-size: 0.7em; }
+    
     .stat-item h2 { font-size: 2.8em; }
 }
 
