@@ -753,52 +753,6 @@ a:hover {
     font-weight: 700;
 }
 
-/* Workflow Section */
-.workflow-section {
-    padding: var(--padding-section);
-    background-color: var(--color-dark-blue);
-}
-
-.workflow-phase {
-    margin-top: 60px;
-}
-
-.workflow-phase .sub-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.workflow-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
-
-.workflow-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.workflow-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.workflow-card .icon {
-    font-size: 3em;
-    color: var(--color-accent-green);
-    margin-bottom: 20px;
-}
-
 /* Control Panel Guide Section */
 .control-panel-section {
     padding: var(--padding-section);
@@ -987,7 +941,6 @@ a:hover {
         margin: 0 auto;
         display: block;
     }
-    .workflow-card { flex-basis: 45%; }
     .mission-vision-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1007,8 +960,7 @@ a:hover {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    .workflow-cards, .control-buttons, .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .workflow-card { max-width: 90%; min-width: unset; }
+    .control-buttons, .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .control-button { width: 160px; height: 160px; font-size: 0.9em; }
     .contact-form .btn { align-self: center; }
     
@@ -1023,8 +975,7 @@ a:hover {
     .nav-links { gap: 10px; justify-content: center; }
     .nav-links a { font-size: 0.8em; }
     .nav-btn { padding: 5px 12px !important; font-size: 0.8em !important; }
-    
-    .workflow-cards, .gallery-grid, .team-grid { grid-template-columns: 1fr; }
+    .gallery-grid, .team-grid { grid-template-columns: 1fr; }
     
     .control-buttons { gap: 15px; }
     .control-button { width: 140px; height: 140px; }

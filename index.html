@@ -43,7 +43,6 @@
             <a href="#" class="logo">MIX<span>BOT</span></a>
             <ul class="nav-links">
                 <li><a href="#features">ฟีเจอร์เด่น</a></li>
-                <li><a href="#workflow">การทำงาน</a></li>
                 <li><a href="#technical">ข้อมูลเทคนิค</a></li>
                 <li><a href="#team">ทีมผู้พัฒนา</a></li>
                 <li><a href="#contact" class="nav-btn">จองคิวสาธิต</a></li>
@@ -61,7 +60,6 @@
                     <p>ยกระดับบาร์ของคุณด้วยแขนกลอัจฉริยะ ผสมผสานเทคโนโลยีความแม่นยำสูงเข้ากับศิลปะแห่งเครื่องดื่ม เพื่อประสิทธิภาพระดับมาตรฐานสากล</p>
                     <div class="hero-btns">
                         <a href="#contact" class="btn">ติดต่อขอรับคำปรึกษา</a>
-                        <a href="#workflow" class="btn btn-outline">ดูการทำงาน</a>
                     </div>
                 </div>
             </div>
@@ -341,80 +339,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </section>
-
-    <!-- Workflow Section -->
-    <section id="workflow" class="workflow-section reveal">
-        <div class="container">
-            <h2>ขั้นตอนการทำงานที่ไร้รอยต่อ</h2>
-
-            <!-- ช่วงที่ 1 -->
-            <div class="workflow-phase">
-                <span class="sub-title">ช่วงที่ 1: การเตรียมส่วนผสม (ระบบอัตโนมัติด้วยแขนกล + เซนเซอร์อัจฉริยะ)</span>
-                <div class="workflow-cards">
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-robot"></i></div>
-                        <h3>ขั้นตอนที่ 1 [หยิบกระบอก]</h3>
-                        <p>แขนกลเคลื่อนที่ไปหยิบกระบอกเขย่า (Shaker) จากจุดเริ่มต้นด้วยตัวคีบ (Gripper)</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-cube"></i></div>
-                        <h3>ขั้นตอนที่ 2 [เติมน้ำแข็งอัจฉริยะ]</h3>
-                        <p>แขนกลวางกระบอกที่แท่นกดน้ำแข็ง <strong>IR Sensor</strong> ตรวจจับวัตถุ -> สั่งเปิดประตูกลปล่อยน้ำแข็ง -> <strong>Ultrasonic Sensor</strong> วัดระดับความสูงของน้ำแข็งเพื่อสั่งปิดประตูกลทันที</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-weight"></i></div>
-                        <h3>ขั้นตอนที่ 3 [เติมของเหลวระบบชั่งน้ำหนัก]</h3>
-                        <p><strong>Load Cell</strong> ใต้แท่นรองทำการ Tare น้ำหนักกระบอกออก -> วาล์วจ่ายน้ำเชื่อมเปิดออก -> เมื่อน้ำหนักถึงเกณฑ์ที่ตั้งไว้อย่างแม่นยำ (หน่วยกรัม) วาล์วจะสั่งปิดสนิท 100%</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-hand-holding"></i></div>
-                        <h3>ขั้นตอนที่ 4 [ส่งต่อให้มนุษย์]</h3>
-                        <p>แขนกลพากระบอกเขย่ามาวางในจุดส่งต่อที่กำหนดไว้ จากนั้นปล่อยมือเพื่อให้ผู้ใช้งานทำงานในขั้นตอนต่อไป</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ช่วงที่ 2 -->
-            <div class="workflow-phase">
-                <span class="sub-title">ช่วงที่ 2: การเขย่าเครื่องดื่ม (โดยมนุษย์และเครื่องเขย่า)</span>
-                <div class="workflow-cards">
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-sync"></i></div>
-                        <h3>ขั้นตอนที่ 5 [เตรียมเขย่า]</h3>
-                        <p>ผู้ใช้งานปิดฝากระบอก นำไปล็อกเข้ากับเครื่องเขย่า (Shaking Machine) แล้วกด <strong>ปุ่มควบคุมสีน้ำเงิน</strong> เพื่อเริ่มกระบวนการ</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
-                        <h3>ขั้นตอนที่ 6 [นำออก]</h3>
-                        <p>เมื่อเครื่องทำงานเสร็จสิ้นตามเวลาที่ตั้งโปรแกรมไว้ ผู้ใช้งานจะหยิบกระบอกเขย่าออกมาถือสแตนด์บายไว้ในมือ</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ช่วงที่ 3 -->
-            <div class="workflow-phase">
-                <span class="sub-title">ช่วงที่ 3: การเตรียมแก้วและเสิร์ฟ (ระบบกึ่งอัตโนมัติร่วมกัน)</span>
-                <div class="workflow-cards">
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-glass-martini-alt"></i></div>
-                        <h3>ขั้นตอนที่ 7 [แขนกลเตรียมแก้ว]</h3>
-                        <p>ผู้ใช้งานกด <strong>ปุ่มควบคุมสีแดง ครั้งที่ 1 (Button A)</strong> แขนกลจะหยิบแก้วเสิร์ฟมาถือสแตนด์บายรอไว้ ณ จุดเทน้ำที่กำหนด</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-faucet"></i></div>
-                        <h3>ขั้นตอนที่ 8 [มนุษย์เทเครื่องดื่ม]</h3>
-                        <p>ผู้ใช้งานเทเครื่องดื่มลงไปในแก้วเสิร์ฟที่แขนกลกำลังถือล็อกนิ่งไว้อย่างมั่นคง เพื่อป้องกันความผิดพลาดและการหกเลอะเทอะ</p>
-                    </div>
-                    <div class="workflow-card">
-                        <div class="icon"><i class="fas fa-check-circle"></i></div>
-                        <h3>ขั้นตอนที่ 9 [แขนกลเสิร์ฟสมบูรณ์]</h3>
-                        <p>ผู้ใช้งานกด <strong>ปุ่มควบคุมสีแดง ครั้งที่ 2 (Button B)</strong> เพื่อยืนยัน แขนกลจะยกแก้วไปวางเสิร์ฟให้ลูกค้าอย่างนุ่มนวล</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
