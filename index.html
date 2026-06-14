@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="th-TH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MixBot - แขนกลบาร์เทนเดอร์อัจฉริยะ ผสมผสานเทคโนโลยี AI และความแม่นยำสูง เพื่อยกระดับมาตรฐานบาร์และการบริการระดับโลก">
+    <meta name="keywords" content="MixBot, Smart Bartender, Robot Arm, Automation, หุ่นยนต์ชงเครื่องดื่ม">
+    <title>Smart Bartender Arm Mixing Drinks - MixBot</title>
+    <link rel="icon" type="image/x-icon" href="image/LOGO.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">MIX<span>BOT</span></a>
+            <ul class="nav-links">
+                <li><a href="#features">ฟีเจอร์เด่น</a></li>
+                <li><a href="#workflow">การทำงาน</a></li>
+                <li><a href="#technical">ข้อมูลเทคนิค</a></li>
+                <li><a href="#team">ทีมผู้พัฒนา</a></li>
+                <li><a href="#contact" class="nav-btn">จองคิวสาธิต</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-wrapper">
+            <div class="hero-content-left reveal">
+                <div class="hero-glass-card">
+                    <span class="hero-badge">AI-Powered Robotics</span>
+                    <h1>Smart Bartender Arm<br><span>Mixing Drinks: MixBot</span></h1>
+                    <p>ยกระดับบาร์ของคุณด้วยแขนกลอัจฉริยะ ผสมผสานเทคโนโลยีความแม่นยำสูงเข้ากับศิลปะแห่งเครื่องดื่ม เพื่อประสิทธิภาพระดับมาตรฐานสากล</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn">ติดต่อขอรับคำปรึกษา</a>
+                        <a href="#workflow" class="btn btn-outline">ดูการทำงาน</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-right reveal">
+                <!-- เปลี่ยนเป็น Relative Path เพื่อความสะดวกในการย้ายไฟล์ -->
+                <img src="image/เเขนกล+เครื่องเชค.png" alt="MixBot Robot Arm" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section reveal">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h2 class="stat-number" data-target="99.9">0</h2><span class="unit">%</span>
+                <p>ความแม่นยำในการผสม</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="stat-number" data-target="24">0</h2><span class="unit">/7</span>
+                <p>มาตรฐานการทำงาน</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="stat-number" data-target="0">0</h2><span class="unit">%</span>
+                <p>โอกาสเกิดความผิดพลาด</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section reveal">
+        <div class="container mission-vision-grid">
+            <div class="mission-content">
+                <span class="sub-title">พันธกิจ (MISSION)</span>
+                <h2>Precision in Every Drop</h2>
+                <p>Empowering the future of hospitality through intelligent precision, delivering perfection in every drop while enhancing business operational excellence.</p>
+                <div class="th-box">
+                    <p>ขับเคลื่อนอนาคตแห่งการบริการด้วยความแม่นยำอัจฉริยะ เพื่อส่งมอบความสมบูรณ์แบบในทุกหยด พร้อมยกระดับขีดความสามารถในการดำเนินธุรกิจสู่ความเป็นเลิศ</p>
+                </div>
+            </div>
+            <div class="vision-content">
+                <span class="sub-title">วิสัยทัศน์ (VISION)</span>
+                <h2>The Global Benchmark</h2>
+                <p>To set the global benchmark for robotic automation in service, harmonizing cutting-edge innovation with unforgettable human experiences.</p>
+                <div class="th-box">
+                    <p>มุ่งมั่นสู่การเป็นบรรทัดฐานระดับโลกด้านนวัตกรรมหุ่นยนต์บริการ ที่ซึ่งเทคโนโลยีขั้นสูงและประสบการณ์อันน่าจดจำของผู้คนประสานกันอย่างลงตัว</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specs Section -->
+    <section id="technical" class="technical-section reveal">
+        <div class="container">
+            <span class="sub-title">ข้อมูลทางวิศวกรรม (TECHNICAL SPECS)</span>
+            <h2>ข้อมูลทางวิศวกรรม</h2>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>ระบบควบคุมหลัก</h4>
+                    <p>Arduino/ESP32 Base Control พร้อมระบบประมวลผลคำสั่งแบบ Real-time</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-weight-hanging"></i>
+                    <h4>ขีดความสามารถในการรับน้ำหนัก</h4>
+                    <p>รองรับน้ำหนักสูงสุด 500 กรัม แม่นยำทุกองศาการเคลื่อนที่</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>ประสิทธิภาพพลังงาน</h4>
+                    <p>ใช้พลังงานต่ำเพียง 12V 5A รองรับการทำงานต่อเนื่องนานกว่า 12 ชม.</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h4>ภาษาและการโปรแกรม</h4>
+                    <p>เขียนด้วยภาษา C++/Python พร้อม Algorithm คำนวณความเร็วการไหลของของเหลว</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-crosshairs"></i>
+                    <h4>ระบบควบคุมความแม่นยำสูง</h4>
+                    <p>ระบบควบคุมการเคลื่อนที่แบบ Closed-loop ให้ความละเอียดแม่นยำในระดับมิลลิองศา</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-tint-slash"></i>
+                    <h4>เทคโนโลยีลดการสั่นสะเทือน</h4>
+                    <p>อัลกอริทึมคำนวณจุดศูนย์ถ่วงแบบไดนามิก ป้องกันการหกหรือกระเด็นขณะทำงานด้วยความเร็วสูง</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-shield-virus"></i>
+                    <h4>วัสดุมาตรฐานฟู้ดเกรด</h4>
+                    <p>ชิ้นส่วนสัมผัสเครื่องดื่มผลิตจากวัสดุมาตรฐานอุตสาหกรรม ปลอดภัยและทำความสะอาดง่าย</p>
+                </div>
+                <div class="spec-card">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h4>การวิเคราะห์ข้อมูลคลาวด์</h4>
+                    <p>รองรับการจัดเก็บข้อมูลผ่านระบบ Cloud เพื่อวิเคราะห์สถิติการใช้งานและประเมินผลแบบ Real-time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science & Math Deep Dive Section -->
+    <section id="science-deep-dive" class="science-section reveal">
+        <div class="container">
+            <span class="sub-title">THE SCIENCE BEHIND MIXBOT</span>
+            <h2>หลักการทางวิทยาศาสตร์และคณิตศาสตร์</h2>
+            <div class="science-grid">
+                <div class="science-card">
+                    <div class="science-icon"><i class="fas fa-calculator"></i></div>
+                    <h4>Inverse Kinematics</h4>
+                    <p>การคำนวณย้อนกลับจากพิกัด (X, Y, Z) เพื่อหาองศาการหมุนของ Servo ทั้ง 6 ตัว โดยใช้ตรีโกณมิติระดับสูง เพื่อให้ตำแหน่งการเคลื่อนที่แม่นยำในระดับ 1.0 มม.</p>
+                    <div class="formula-box">$\theta = \arctan2(y, x)$</div>
+                </div>
+                <div class="science-card">
+                    <div class="science-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>PID Control Algorithm</h4>
+                    <p>ระบบควบคุมแบบป้อนกลับ (Feedback Control) ที่ใช้ในระบบชั่งน้ำหนัก Load Cell เพื่อป้องกันการจ่ายของเหลวเกินขนาด (Overshoot) และหยุดจ่ายได้ทันทีที่น้ำหนักถึงเกณฑ์</p>
+                </div>
+                <div class="science-card">
+                    <div class="science-icon"><i class="fas fa-microscope"></i></div>
+                    <h4>Fluid Dynamics Analysis</h4>
+                    <p>วิเคราะห์อัตราการไหลของของเหลวตามแรงโน้มถ่วง เพื่อคำนวณเวลาในการเปิด-ปิดวาล์วที่สัมพันธ์กับความหนืดของน้ำเชื่อมชนิดต่างๆ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery / Demo Section -->
+    <section id="gallery" class="gallery-section reveal">
+        <div class="container">
+            <h2>วิดีโอสาธิตการทำงาน</h2>
+            <div class="video-container">
+                <!-- แทนที่ด้วยลิงก์วิดีโอ YouTube หรือไฟล์วิดีโอของคุณ -->
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>คลิกเพื่อดูการทำงานจริงของ MixBot ในห้องปฏิบัติการ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Showcase Section -->
+    <section id="hardware-showcase" class="hardware-section reveal">
+        <div class="container">
+            <span class="sub-title">CORE COMPONENTS</span>
+            <h2>ส่วนประกอบหลักของ MixBot</h2>
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <div class="hardware-img-container">
+                        <img src="image/เเขนกล.png" alt="แขนกลอัจฉริยะ MixBot" loading="lazy">
+                    </div>
+                    <div class="hardware-info">
+                        <h3>แขนกลอัจฉริยะ (Smart Robot Arm)</h3>
+                        <p>หัวใจหลักในการเคลื่อนที่และหยิบจับภาชนะ ออกแบบมาเพื่อความคล่องตัวและแม่นยำสูงในพื้นที่จำกัด</p>
+                    </div>
+                </div>
+                <div class="hardware-card">
+                    <div class="hardware-img-container">
+                        <img src="image/เครื่องเชค.png" alt="เครื่องเขย่า Shaking Machine" loading="lazy">
+                    </div>
+                    <div class="hardware-info">
+                        <h3>เครื่องเขย่าความเร็วสูง (Shaking Machine)</h3>
+                        <p>ระบบเขย่าเชิงกลที่ออกแบบมาเพื่อสกัดรสชาติและผสมส่วนผสมให้เข้ากันอย่างสมบูรณ์แบบในเวลาที่กำหนด</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sensor Principles Section -->
+    <section id="sensor-principles" class="sensor-principles-section reveal">
+        <div class="container">
+            <span class="sub-title">SENSOR TECHNOLOGY</span>
+            <h2>หลักการทำงานของเซนเซอร์อัจฉริยะ</h2>
+            <div class="sensor-grid">
+                <div class="sensor-card">
+                    <div class="sensor-header">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h4>Infrared Proximity Sensing</h4>
+                    </div>
+                    <div class="sensor-img-container">
+                        <img src="path/to/ir-sensor-actual.jpg" alt="การติดตั้ง IR Sensor จริง">
+                    </div>
+                    <p><strong>หลักการ:</strong> ใช้การแผ่รังสีอินฟราเรดจากตัวส่ง (Emitter) และตรวจวัดความเข้มของรังสีที่สะท้อนกลับมายังตัวรับ (Receiver) เพื่อยืนยันตำแหน่งเชิงพื้นที่ของวัตถุ (Object Detection) บนแท่นปฏิบัติการก่อนเริ่มกระบวนการถัดไป</p>
+                </div>
+                <div class="sensor-card">
+                    <div class="sensor-header">
+                        <i class="fas fa-wave-square"></i>
+                        <h4>Ultrasonic Distance Measurement</h4>
+                    </div>
+                    <div class="sensor-img-container">
+                        <img src="path/to/ultrasonic-sensor-actual.jpg" alt="การติดตั้ง Ultrasonic Sensor จริง">
+                    </div>
+                    <p><strong>หลักการ:</strong> อาศัยการคำนวณระยะเวลาการเดินทางของคลื่นเสียงความถี่สูง (Time of Flight) ที่สะท้อนจากผิววัตถุกลับมายังเซนเซอร์ เพื่อตรวจวัดระดับความพูนของน้ำแข็งในกระบอกแบบ Non-contact โดยมีความแม่นยำสูงในระดับมิลลิเมตร</p>
+                </div>
+                <div class="sensor-card">
+                    <div class="sensor-header">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4>Load Cell Piezoresistive Sensing</h4>
+                    </div>
+                    <div class="sensor-img-container">
+                        <img src="path/to/loadcell-actual.jpg" alt="การติดตั้ง Load Cell จริง">
+                    </div>
+                    <p><strong>หลักการ:</strong> ตรวจวัดการเปลี่ยนแปลงความต้านทานไฟฟ้าของ Strain Gauge เมื่อได้รับแรงกดจากการเติมของเหลว (Weight-based Feedback Control) ทำงานร่วมกับฟังก์ชัน Tare เพื่อขจัดค่าคงที่ของภาชนะ ทำให้ได้ปริมาตรของส่วนผสมที่เที่ยงตรงตามหลักจลนศาสตร์</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section reveal">
+        <div class="container">
+            <h2>คุณสมบัติเด่นของ MixBot</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>ความแม่นยำสูง</h3>
+                    <p>ตวงและผสมส่วนผสมด้วยความแม่นยำระดับมิลลิลิตร ให้รสชาติคงที่ทุกแก้วมาตรฐานสากล</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>ทำงานได้ 24/7</h3>
+                    <p>พร้อมให้บริการตลอดเวลาไม่มีหยุดพัก เพิ่มขีดความสามารถในการบริการและลดปัญหาการขาดแคลนพนักงาน</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>ความปลอดภัยสูงสุด</h3>
+                    <p>เซนเซอร์ตรวจจับอัจฉริยะ ป้องกันการชนและหยุดทำงานทันทีเมื่อมีสิ่งกีดขวางในระยะทำงาน</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>ระบบวิเคราะห์อัจฉริยะ</h3>
+                    <p>ติดตามสถานะวัตถุดิบและข้อมูลการขายแบบ Real-time ผ่านแอปพลิเคชันมือถือ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section reveal-stagger">
+        <div class="container">
+            <h2>พนักงานทั่วไป vs MixBot</h2>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>หัวข้อเปรียบเทียบ</th>
+                            <th>พนักงานทั่วไป</th>
+                            <th class="highlight">MixBot (Smart Arm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ความเร็วในการชง</td>
+                            <td>แปรผันตามความเหนื่อยล้า</td>
+                            <td>รวดเร็วและสม่ำเสมอทุกแก้ว</td>
+                        </tr>
+                        <tr>
+                            <td>ความแม่นยำของสูตร</td>
+                            <td>มีโอกาสคลาดเคลื่อนได้</td>
+                            <td>แม่นยำระดับมิลลิลิตร 100%</td>
+                        </tr>
+                        <tr>
+                            <td>เวลาการทำงาน</td>
+                            <td>จำกัดตามกะ (มีเวลาพัก)</td>
+                            <td>ทำงานต่อเนื่องได้ 24/7</td>
+                        </tr>
+                        <tr>
+                            <td>ต้นทุนในระยะยาว</td>
+                            <td>ค่าแรงและสวัสดิการต่อเนื่อง</td>
+                            <td>ลงทุนครั้งเดียว คุ้มค่าในระยะยาว</td>
+                        </tr>
+                        <tr>
+                            <td>ความผิดพลาด/ของเสีย</td>
+                            <td>เกิดขึ้นได้จาก Human Error</td>
+                            <td>ควบคุมมาตรฐานได้สมบูรณ์แบบ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow-section reveal">
+        <div class="container">
+            <h2>ขั้นตอนการทำงานที่ไร้รอยต่อ</h2>
+
+            <!-- ช่วงที่ 1 -->
+            <div class="workflow-phase">
+                <span class="sub-title">ช่วงที่ 1: การเตรียมส่วนผสม (ระบบอัตโนมัติด้วยแขนกล + เซนเซอร์อัจฉริยะ)</span>
+                <div class="workflow-cards">
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <h3>ขั้นตอนที่ 1 [หยิบกระบอก]</h3>
+                        <p>แขนกลเคลื่อนที่ไปหยิบกระบอกเขย่า (Shaker) จากจุดเริ่มต้นด้วยตัวคีบ (Gripper)</p>
+                    </div>
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-cube"></i></div>
+                        <h3>ขั้นตอนที่ 2 [เติมน้ำแข็งอัจฉริยะ]</h3>
+                        <p>แขนกลวางกระบอกที่แท่นกดน้ำแข็ง <strong>IR Sensor</strong> ตรวจจับวัตถุ -> สั่งเปิดประตูกลปล่อยน้ำแข็ง -> <strong>Ultrasonic Sensor</strong> วัดระดับความสูงของน้ำแข็งเพื่อสั่งปิดประตูกลทันที</p>
+                    </div>
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-weight"></i></div>
+                        <h3>ขั้นตอนที่ 3 [เติมของเหลวระบบชั่งน้ำหนัก]</h3>
+                        <p><strong>Load Cell</strong> ใต้แท่นรองทำการ Tare น้ำหนักกระบอกออก -> วาล์วจ่ายน้ำเชื่อมเปิดออก -> เมื่อน้ำหนักถึงเกณฑ์ที่ตั้งไว้อย่างแม่นยำ (หน่วยกรัม) วาล์วจะสั่งปิดสนิท 100%</p>
+                    </div>
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-hand-holding"></i></div>
+                        <h3>ขั้นตอนที่ 4 [ส่งต่อให้มนุษย์]</h3>
+                        <p>แขนกลพากระบอกเขย่ามาวางในจุดส่งต่อที่กำหนดไว้ จากนั้นปล่อยมือเพื่อให้ผู้ใช้งานทำงานในขั้นตอนต่อไป</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ช่วงที่ 2 -->
+            <div class="workflow-phase">
+                <span class="sub-title">ช่วงที่ 2: การเขย่าเครื่องดื่ม (โดยมนุษย์และเครื่องเขย่า)</span>
+                <div class="workflow-cards">
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-sync"></i></div>
+                        <h3>ขั้นตอนที่ 5 [เตรียมเขย่า]</h3>
+                        <p>ผู้ใช้งานปิดฝากระบอก นำไปล็อกเข้ากับเครื่องเขย่า (Shaking Machine) แล้วกด <strong>ปุ่มควบคุมสีน้ำเงิน</strong> เพื่อเริ่มกระบวนการ</p>
+                    </div>
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
+                        <h3>ขั้นตอนที่ 6 [นำออก]</h3>
+                        <p>เมื่อเครื่องทำงานเสร็จสิ้นตามเวลาที่ตั้งโปรแกรมไว้ ผู้ใช้งานจะหยิบกระบอกเขย่าออกมาถือสแตนด์บายไว้ในมือ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ช่วงที่ 3 -->
+            <div class="workflow-phase">
+                <span class="sub-title">ช่วงที่ 3: การเตรียมแก้วและเสิร์ฟ (ระบบกึ่งอัตโนมัติร่วมกัน)</span>
+                <div class="workflow-cards">
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-glass-martini-alt"></i></div>
+                        <h3>ขั้นตอนที่ 7 [แขนกลเตรียมแก้ว]</h3>
+                        <p>ผู้ใช้งานกด <strong>ปุ่มควบคุมสีแดง ครั้งที่ 1 (Button A)</strong> แขนกลจะหยิบแก้วเสิร์ฟมาถือสแตนด์บายรอไว้ ณ จุดเทน้ำที่กำหนด</p>
+                    </div>
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-faucet"></i></div>
+                        <h3>ขั้นตอนที่ 8 [มนุษย์เทเครื่องดื่ม]</h3>
+                        <p>ผู้ใช้งานเทเครื่องดื่มลงไปในแก้วเสิร์ฟที่แขนกลกำลังถือล็อกนิ่งไว้อย่างมั่นคง เพื่อป้องกันความผิดพลาดและการหกเลอะเทอะ</p>
+                    </div>
+                    <div class="workflow-card">
+                        <div class="icon"><i class="fas fa-check-circle"></i></div>
+                        <h3>ขั้นตอนที่ 9 [แขนกลเสิร์ฟสมบูรณ์]</h3>
+                        <p>ผู้ใช้งานกด <strong>ปุ่มควบคุมสีแดง ครั้งที่ 2 (Button B)</strong> เพื่อยืนยัน แขนกลจะยกแก้วไปวางเสิร์ฟให้ลูกค้าอย่างนุ่มนวล</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Control Panel Guide Section -->
+    <section class="control-panel-section reveal">
+        <div class="container">
+            <h2>ควบคุมง่ายดายด้วยปลายนิ้ว</h2>
+            <p>แผงควบคุมที่ออกแบบมาเพื่อการใช้งานที่ง่ายและมีประสิทธิภาพสูงสุด</p>
+            <div class="control-buttons">
+                <div class="control-button green">
+                    <div class="icon"><i class="fas fa-play"></i></div> <!-- สามารถเปลี่ยนไอคอนได้ที่นี่ -->
+                    <p>เริ่มการทำงาน</p>
+                    <p>เปิดใช้งานระบบและเตรียมพร้อมสำหรับการบริการ</p>
+                </div>
+                <div class="control-button blue">
+                    <div class="icon"><i class="fas fa-cogs"></i></div> <!-- สามารถเปลี่ยนไอคอนได้ที่นี่ -->
+                    <p>ปรับแต่งสูตร</p>
+                    <p>เข้าถึงเมนูการตั้งค่าเพื่อปรับเปลี่ยนสูตรเครื่องดื่ม</p>
+                </div>
+                <div class="control-button red">
+                    <div class="icon"><i class="fas fa-power-off"></i></div> <!-- สามารถเปลี่ยนไอคอนได้ที่นี่ -->
+                    <p>หยุดฉุกเฉิน</p>
+                    <p>หยุดการทำงานทั้งหมดในกรณีฉุกเฉินเพื่อความปลอดภัย</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="milestones" class="timeline-section reveal">
+        <div class="container">
+            <span class="sub-title">PROJECT JOURNEY</span>
+            <h2>เส้นทางการพัฒนาโครงงาน</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>ระยะที่ 1: การกำหนดปัญหาและการทบทวนวรรณกรรม</h4>
+                        <p>ศึกษาเอกสารและงานวิจัยที่เกี่ยวข้อง (Literature Review) เพื่อวิเคราะห์ความเป็นไปได้ทางเทคนิค กำหนดขอบเขต และวางสถาปัตยกรรมระบบหุ่นยนต์อัจฉริยะ</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>ระยะที่ 2: การออกแบบเชิงวิศวกรรมและการคำนวณจลนศาสตร์</h4>
+                        <p>พัฒนาแบบจำลอง 3 มิติเชิงทัศนวิสัย (3D Modeling) และคำนวณทางจลนศาสตร์ (Kinematics) เพื่อคัดเลือกอุปกรณ์และระบบอิเล็กทรอนิกส์ให้สอดคล้องกับมาตรฐานทางวิศวกรรม</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>ระยะที่ 3: การบูรณาการระบบและการประมวลผลคำสั่ง</h4>
+                        <p>ดำเนินการติดตั้งโครงสร้างกลไกเชิงกล พัฒนาระบบควบคุมไมโครคอนโทรลเลอร์แบบ Real-time และส่วนต่อประสานกับผู้ใช้ (UI) ให้ทำงานประสานกันอย่างสมบูรณ์</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>ระยะที่ 4: การสอบเทียบ การวิเคราะห์ผล และการประเมินประสิทธิภาพ</h4>
+                        <p>ดำเนินการสอบเทียบเครื่องมือ (Calibration) เพื่อหาค่าความคลาดเคลื่อน วิเคราะห์เสถียรภาพในการริน และประเมินมาตรฐานความปลอดภัยตามหลักการยศาสตร์</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section reveal">
+        <div class="container">
+            <span class="sub-title">คณะผู้พัฒนาโครงงาน</span>
+            <h2>ทีมผู้พัฒนาโครงงาน</h2>
+            <div class="team-grid">
+                <!-- Group 1: Mechanical & Hardware -->
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>ณชพล ศิริพรทุม</h4>
+                    <div class="member-roles">
+                        <span class="role-tag leader"><i class="fas fa-crown"></i> หัวหน้าโครงงาน</span>
+                        <span class="role-tag software"><i class="fas fa-code"></i> ออกแบบ UX/UI</span>
+                        <span class="role-tag software"><i class="fas fa-code"></i> เขียนโค้ดควบคุมอุปกรณ์</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> วิเคราะห์สถิติ</span>
+                        <span class="role-tag hardware"><i class="fas fa-microchip"></i> วิศวกรออกแบบกลไก</span>
+                        <span class="role-tag hardware"><i class="fas fa-microchip"></i> ออกแบบวงจรไฟฟ้า</span>
+                        <span class="role-tag software"><i class="fas fa-code"></i> นักพัฒนาซอฟต์แวร์</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ดูแลสื่อนำเสนอ</span>
+                        
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>ธนวิชญ์ ภิญโญ</h4>
+                    <div class="member-roles">
+                        <span class="role-tag software"><i class="fas fa-code"></i> เขียนโค้ดควบคุมอุปกรณ์</span>
+                        <span class="role-tag hardware"><i class="fas fa-microchip"></i> วิศวกรออกแบบกลไก</span>
+                        <span class="role-tag hardware"><i class="fas fa-microchip"></i> ออกแบบวงจรไฟฟ้า</span>
+                        <span class="role-tag software"><i class="fas fa-code"></i> ดูแลทั้งระบบหน้าบ้านและหลังบ้าน</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ค้นคว้าข้อมูล</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>กฤติพงษ์ สีทอง</h4>
+                    <div class="member-roles">
+                        <span class="role-tag hardware"><i class="fas fa-microchip"></i> ปั้นโมเดล 3D</span>
+                        <span class="role-tag safety"><i class="fas fa-user-shield"></i> ฝ่ายความปลอดภัย</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ฝ่ายการตลาดและประชาสัมพันธ์</span>
+                    </div>
+                </div>
+
+                <!-- Group 2: Management & Research -->
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>พันแสง รจนาพล</h4>
+                    <div class="member-roles">
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> จัดหาซื้อของ</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ค้นคว้าข้อมูล</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> วิเคราะห์สถิติ</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>วายุ ชิดพลกรัง</h4>
+                    <div class="member-roles">
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> จัดการเรื่องเงิน</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ฝ่ายพัฒนาธุรกิจ</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ฝ่ายการตลาดและประชาสัมพันธ์</span>
+                        <span class="role-tag software"><i class="fas fa-code"></i> ดูแลทั้งระบบหน้าบ้านและหลังบ้าน</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>ศุภโชค สืบใจกล้า</h4>
+                    <div class="member-roles">
+                        <span class="role-tag safety"><i class="fas fa-user-shield"></i> ฝ่ายความปลอดภัย</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ค้นคว้าข้อมูล</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> วิเคราะห์สถิติ</span>
+                    </div>
+                </div>
+
+                <!-- Group 3: Documentation & Marketing -->
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>อรรครัตน์ อ่อนแพง</h4>
+                    <div class="member-roles">
+                        <span class="role-tag hardware"><i class="fas fa-microchip"></i> ปั้นโมเดล 3D</span>
+                        <span class="role-tag safety"><i class="fas fa-user-shield"></i> ฝ่ายความปลอดภัย</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ฝ่ายการตลาดและประชาสัมพันธ์</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>ชลนที ทวีค่ำคูณ</h4>
+                    <div class="member-roles">
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> จัดหาซื้อของ</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ค้นคว้าข้อมูล</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> วิเคราะห์สถิติ</span>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-img"><i class="fas fa-user-circle"></i></div>
+                    <h4>ศตายุ บัวบานบุตร</h4>
+                    <div class="member-roles">
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ฝ่ายพัฒนาธุรกิจ</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> จัดการเรื่องเงิน</span>
+                        <span class="role-tag management"><i class="fas fa-briefcase"></i> ฝ่ายการตลาดและประชาสัมพันธ์</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section reveal" id="contact">
+        <div class="container">
+            <h2>พร้อมยกระดับธุรกิจของคุณหรือยัง?</h2>
+            <p>ติดต่อเราวันนี้เพื่อรับข้อเสนอพิเศษและคำปรึกษาจากผู้เชี่ยวชาญ</p>
+            <form class="contact-form" action="#" method="POST"> <!-- จุดที่ควรเปลี่ยน action ของฟอร์มเพื่อส่งข้อมูล -->
+                <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+                <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+                <textarea name="message" placeholder="ข้อความ/คำถามของคุณ" required></textarea>
+                <button type="submit" class="btn">ส่งข้อความ</button>
+            </form>
+            <p style="margin-top: 40px;">หรือติดต่อเราโดยตรง:</p>
+            <p>
+                <i class="fas fa-phone-alt"></i> <a href="tel:+66123456789">012-345-6789</a> <!-- จุดที่ควรเปลี่ยนเบอร์โทรศัพท์ -->
+                <span style="margin: 0 15px;">|</span>
+                <i class="fas fa-envelope"></i> <a href="mailto:info@mixbot.com">info@mixbot.com</a> <!-- จุดที่ควรเปลี่ยนอีเมล -->
+                <span style="margin: 0 15px;">|</span>
+                <i class="fab fa-line"></i> <a href="https://line.me/ti/p/@yourlineid" target="_blank">Line Official</a> <!-- จุดที่ควรเปลี่ยนลิงก์ Line Official -->
+                <span style="margin: 0 15px;">|</span>
+                <i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@yourtiktok" target="_blank">TikTok MixBot</a> <!-- จุดที่ควรเปลี่ยนลิงก์ TikTok -->
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Smart Bartender Arm Mixing Drinks (MixBot). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
