@@ -27,6 +27,7 @@ body {
     color: var(--color-light-grey);
     background-color: var(--color-dark-blue);
     scroll-behavior: smooth;
+    overflow-x: hidden; /* ป้องกันเนื้อหาล้นออกด้านข้างบนมือถือ */
 }
 
 .container {
@@ -595,7 +596,7 @@ a:hover {
 }
 
 .hero-content-left {
-    flex: 1.2;
+    flex: 1;
     text-align: left;
 }
 
@@ -610,7 +611,7 @@ a:hover {
 }
 
 .hero-image-right {
-    flex: 1;
+    flex: 1.5; /* เพิ่มสัดส่วนพื้นที่ให้ฝั่งรูปภาพ */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -618,7 +619,7 @@ a:hover {
 }
 
 .hero-image-right img {
-    max-width: 100%;
+    max-width: 125%; /* ขยายขนาดรูปภาพให้ใหญ่กว่าเดิม */
     height: auto;
     filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.2));
     animation: float 6s ease-in-out infinite;
@@ -961,13 +962,25 @@ a:hover {
 @media (max-width: 992px) {
     h1 { font-size: 2.8em; }
     h2 { font-size: 2em; }
+    .hero-section { justify-content: center; }
     .hero-wrapper {
         flex-direction: column;
         text-align: center;
+        width: 100%;
     }
     .hero-content-left { text-align: center; }
     .hero-btns { justify-content: center; }
-    .hero-image-right img { max-width: 80%; }
+    .hero-image-right {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-image-right img { 
+        max-width: 115%; /* ขยายขนาดรูปภาพให้ใหญ่ขึ้นและดูเต็มตาในมือถือ */
+        height: auto;
+        margin: 0 auto; 
+    }
     .workflow-card { flex-basis: 45%; }
     .mission-vision-grid {
         grid-template-columns: 1fr;
