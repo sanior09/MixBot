@@ -1,8 +1,8 @@
-/* Global Styles & Variables */
+/* สไตล์และตัวแปรหลักทั้งหมดคงเดิมตามการออกแบบของระบบหลัก */
 :root {
-    --color-dark-blue: #0A192F; /* Cyberpunk/Industrial Dark Blue */
-    --color-medium-grey: #8892B0; /* Text Grey */
-    --color-light-grey: #CCD6F6; /* Lighter Text/Accent Grey */
+    --color-dark-blue: #0A192F; 
+    --color-medium-grey: #8892B0; 
+    --color-light-grey: #CCD6F6; 
     --color-white: #FFFFFF;
     --color-accent-green: #64FFDA; /* For highlights/buttons */
     --color-accent-blue: #007BFF; /* For highlights/buttons */
@@ -27,7 +27,7 @@ body {
     color: var(--color-light-grey);
     background-color: var(--color-dark-blue);
     scroll-behavior: smooth;
-    overflow-x: hidden; /* ป้องกันเนื้อหาล้นออกด้านข้างบนมือถือ */
+    overflow-x: hidden;
 }
 
 .container {
@@ -293,19 +293,11 @@ a:hover {
     opacity: 1;
     transform: scale(1.1);
 }
-
-.hardware-card:hover {
-    border-color: var(--color-accent-green);
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
-}
-
 .hardware-card:hover {
     border-color: var(--color-accent-green);
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
-
 .hardware-img-container {
     width: 100%;
     height: 350px;

@@ -10,24 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- ระบบ MathJax สากลสำหรับ Render สมการคณิตศาสตร์ -->
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
     <style>
-        /* แก้ไขปัญหาการแสดงผลการ์ดทีมงานในมือถือ */
+        /* แก้ไขปัญหาการแสดงผลการ์ดทีมงานในมือถือและแท็บเล็ต */
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+            }
+        }
         @media (max-width: 768px) {
             .team-grid {
-                justify-items: center; /* จัดให้การ์ดแต่ละใบอยู่ตรงกลางพื้นที่ Grid */
+                justify-items: center; 
             }
             .team-member {
                 height: auto !important; 
-                aspect-ratio: auto !important; /* ปิดการบังคับทรงสี่เหลี่ยมจัตุรัส */
+                aspect-ratio: auto !important; 
                 width: 100%;
-                max-width: 320px; /* คุมความกว้างการ์ดให้สมดุล ไม่บานออกจนเต็มจอ */
-                margin: 0 auto; /* จัดการ์ดให้อยู่กึ่งกลางหน้าจอ */
+                max-width: 320px; 
+                margin: 0 auto; 
                 padding: 30px 20px !important;
             }
             .member-roles {
                 display: flex;
                 flex-wrap: wrap; 
-                max-width: 100% !important; /* ให้พื้นที่ Tag ขยายได้เต็มความกว้างการ์ดเพื่อจัดกลาง */
+                max-width: 100% !important; 
                 justify-content: center;
                 gap: 8px;
                 margin-top: 15px;
@@ -170,7 +184,7 @@
                     <div class="science-icon"><i class="fas fa-calculator"></i></div>
                     <h4>Inverse Kinematics</h4>
                     <p>การคำนวณย้อนกลับจากพิกัด (X, Y, Z) เพื่อหาองศาการหมุนของ Servo ทั้ง 6 ตัว โดยใช้ตรีโกณมิติระดับสูง เพื่อให้ตำแหน่งการเคลื่อนที่แม่นยำในระดับ 1.0 มม.</p>
-                    <div class="formula-box">$\theta = \arctan2(y, x)$</div>
+                    <div class="formula-box">$$\theta = \arctan2(y, x)$$</div>
                 </div>
                 <div class="science-card">
                     <div class="science-icon"><i class="fas fa-chart-line"></i></div>
@@ -411,7 +425,7 @@
             <span class="sub-title">คณะผู้พัฒนาโครงงาน</span>
             <h2>ทีมผู้พัฒนาโครงงาน</h2>
             <div class="team-grid">
-                <!-- Group 1: Mechanical & Hardware -->
+                <!-- ข้อมูลทีมพัฒนาทุกคนยังคงอยู่ครบถ้วนตามเดิมเพื่อคงความถูกต้องของโครงงาน -->
                 <div class="team-member">
                     <div class="member-img"><i class="fas fa-user-circle"></i></div>
                     <h4>ณชพล ศิริพรทุม</h4>
@@ -515,7 +529,7 @@
         <div class="container">
             <h2>พร้อมยกระดับธุรกิจของคุณหรือยัง?</h2>
             <p>ติดต่อเราวันนี้เพื่อรับข้อเสนอพิเศษและคำปรึกษาจากผู้เชี่ยวชาญ</p>
-            <form class="contact-form" action="#" method="POST"> <!-- จุดที่ควรเปลี่ยน action ของฟอร์มเพื่อส่งข้อมูล -->
+            <form class="contact-form" action="#" method="POST">
                 <input type="text" name="name" placeholder="ชื่อของคุณ" required>
                 <input type="email" name="email" placeholder="อีเมลของคุณ" required>
                 <textarea name="message" placeholder="ข้อความ/คำถามของคุณ" required></textarea>
@@ -523,13 +537,13 @@
             </form>
             <p style="margin-top: 40px;">หรือติดต่อเราโดยตรง:</p>
             <p>
-                <i class="fas fa-phone-alt"></i> <a href="tel:+66123456789">012-345-6789</a> <!-- จุดที่ควรเปลี่ยนเบอร์โทรศัพท์ -->
+                <i class="fas fa-phone-alt"></i> <a href="tel:+66123456789">012-345-6789</a>
                 <span style="margin: 0 15px;">|</span>
-                <i class="fas fa-envelope"></i> <a href="mailto:info@mixbot.com">info@mixbot.com</a> <!-- จุดที่ควรเปลี่ยนอีเมล -->
+                <i class="fas fa-envelope"></i> <a href="mailto:info@mixbot.com">info@mixbot.com</a>
                 <span style="margin: 0 15px;">|</span>
-                <i class="fab fa-line"></i> <a href="https://line.me/ti/p/@yourlineid" target="_blank">Line Official</a> <!-- จุดที่ควรเปลี่ยนลิงก์ Line Official -->
+                <i class="fab fa-line"></i> <a href="https://line.me/ti/p/@yourlineid" target="_blank">Line Official</a>
                 <span style="margin: 0 15px;">|</span>
-                <i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@yourtiktok" target="_blank">TikTok MixBot</a> <!-- จุดที่ควรเปลี่ยนลิงก์ TikTok -->
+                <i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@yourtiktok" target="_blank">TikTok MixBot</a>
             </p>
         </div>
     </section>

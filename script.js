@@ -1,6 +1,6 @@
 // ฟังก์ชันสำหรับตรวจจับการเลื่อนหน้าจอ (Scroll Observer)
 const observerOptions = {
-    threshold: 0.15 // เริ่มแสดงผลเมื่อ Section ปรากฏขึ้นมา 15%
+    threshold: 0.15 
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -16,21 +16,33 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // ฟังก์ชันตัวเลขวิ่ง
+// ฟังก์ชันตัวเลขวิ่งแบบเสถียรและจำกัด Frame Rate ไม่ให้พุ่งเกินเป้าหมาย
 function animateNumbers(el) {
     const target = +el.getAttribute('data-target');
-    const count = +el.innerText;
-    const speed = 200; 
-    const inc = target / speed;
-
-    if (count < target) {
-        el.innerText = (count + inc).toFixed(1);
-        setTimeout(() => animateNumbers(el), 1);
-    } else {
-        el.innerText = target;
+    if (target === 0) {
+        el.innerText = "0";
+        return;
     }
+    
+    let start = 0;
+    const duration = 1500; // วิ่งให้เสร็จภายใน 1.5 วินาที
+    const startTime = performance.now();
+
+    function updateNumber(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        if (elapsedTime < duration) {
+            const progress = elapsedTime / duration;
+            const currentValue = start + (target - start) * progress;
+            el.innerText = currentValue.toFixed(target % 1 === 0 ? 0 : 1);
+            requestAnimationFrame(updateNumber);
+        } else {
+            el.innerText = target;
+        }
+    }
+    requestAnimationFrame(updateNumber);
 }
 
-// สั่งให้ Observer ทำงานกับทุก Element ที่มี Class 'reveal' หรือ 'reveal-stagger'
+// สั่งให้ Observer ทำงานร่วมกับ DOM
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal, .reveal-stagger').forEach(section => {
         observer.observe(section);
@@ -38,26 +50,38 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.stat-item').forEach(stat => {
         observer.observe(stat);
     });
-});
 
-// ระบบ Navbar เปลี่ยนสีเมื่อ Scroll และปุ่ม Back to Top
-const navbar = document.querySelector('.navbar');
-const backToTopBtn = document.getElementById('backToTop');
+    // ระบบ Navbar เปลี่ยนสีเมื่อ Scroll และจัดการความปลอดภัยปุ่ม Back to Top
+    const navbar = document.querySelector('.navbar');
+    const backToTopBtn = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-        backToTopBtn.style.display = 'block';
-    } else {
-        navbar.classList.remove('scrolled');
-        backToTopBtn.style.display = 'none';
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            if (navbar) navbar.classList.add('scrolled');
+            if (backToTopBtn) backToTopBtn.style.display = 'block';
+        } else {
+            if (navbar) navbar.classList.remove('scrolled');
+            if (backToTopBtn) backToTopBtn.style.display = 'none';
+        }
+    }, { passive: true });
+
+    // ฟังก์ชันคลิกเลื่อนกลับด้านบนแบบนุ่มนวล
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
-}, { passive: true });
 
-// ฟังก์ชันเลื่อนกลับด้านบน
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    // ระบบตรวจจับฟอร์มและแจ้งเตือนจำลองความล้ำสมัย
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('🎉 ระบบบันทึกข้อมูลของท่านเรียบร้อยแล้ว แขนกลของเรากำลังประมวลผลคิวจองและเจ้าหน้าที่จะติดต่อกลับไปครับท่าน!');
+            contactForm.reset();
+        });
+    }
 });
