@@ -284,6 +284,7 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.5s ease;
 }
 
@@ -955,6 +956,11 @@ a:hover {
     .btn-outline { margin-left: 0; }
     
     .hardware-grid { grid-template-columns: 1fr; }
+    .hardware-img-container { height: 280px; } /* ปรับความสูงให้เหมาะสมกับมือถือ */
+    .hardware-img-container img {
+        object-fit: contain; /* ปรับเพื่อให้เห็นแขนกลครบถ้วน ไม่โดนตัดขอบ */
+        padding: 10px; /* เพิ่มพื้นที่ว่างรอบรูปเล็กน้อยเพื่อให้ดูไม่ติดขอบเกินไป */
+    }
 
     .stats-grid {
         grid-template-columns: 1fr;
