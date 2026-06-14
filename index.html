@@ -13,14 +13,21 @@
     <style>
         /* แก้ไขปัญหาการแสดงผลการ์ดทีมงานในมือถือ */
         @media (max-width: 768px) {
+            .team-grid {
+                justify-items: center; /* จัดให้การ์ดแต่ละใบอยู่ตรงกลางพื้นที่ Grid */
+            }
             .team-member {
-                height: auto !important; /* อนุญาตให้การ์ดขยายความสูงตามเนื้อหา */
-                min-height: 400px;
-                padding: 20px 15px !important;
+                height: auto !important; 
+                aspect-ratio: auto !important; /* ปิดการบังคับทรงสี่เหลี่ยมจัตุรัส */
+                width: 100%;
+                max-width: 320px; /* คุมความกว้างการ์ดให้สมดุล ไม่บานออกจนเต็มจอ */
+                margin: 0 auto; /* จัดการ์ดให้อยู่กึ่งกลางหน้าจอ */
+                padding: 30px 20px !important;
             }
             .member-roles {
                 display: flex;
-                flex-wrap: wrap; /* ให้ Tag บทบาทตัดขึ้นบรรทัดใหม่ได้ */
+                flex-wrap: wrap; 
+                max-width: 100% !important; /* ให้พื้นที่ Tag ขยายได้เต็มความกว้างการ์ดเพื่อจัดกลาง */
                 justify-content: center;
                 gap: 8px;
                 margin-top: 15px;
